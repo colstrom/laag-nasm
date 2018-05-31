@@ -1,0 +1,13 @@
+diff --git i/Makefile.in w/Makefile.in
+index 1e2f8d59..aa31cdad 100644
+--- i/Makefile.in
++++ w/Makefile.in
+@@ -338,6 +338,8 @@ install: nasm$(X) ndisasm$(X)
+ 	$(INSTALL_PROGRAM) nasm$(X) $(INSTALLROOT)$(bindir)/nasm$(X)
+ 	$(INSTALL_PROGRAM) ndisasm$(X) $(INSTALLROOT)$(bindir)/ndisasm$(X)
+ 	$(MKDIR) -p $(INSTALLROOT)$(mandir)/man1
++
++install-manpages: manpages
+ 	$(INSTALL_DATA) $(srcdir)/nasm.1 $(INSTALLROOT)$(mandir)/man1/nasm.1
+ 	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(INSTALLROOT)$(mandir)/man1/ndisasm.1
+ 
