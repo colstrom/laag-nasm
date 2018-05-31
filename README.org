@@ -1,0 +1,34 @@
+#+TITLE: Library as a Gem -  libsodium
+#+LATEX: \pagebreak
+
+* Overview
+
+  ~laag-nasm~ packages [[http://repo.or.cz/w/nasm.git][nasm]] as a Ruby Gem, using [[https://github.com/colstrom/laag][laag]].
+
+* Updating this Package
+
+  This gem uses Brett Langdon's excellent [[https://github.com/brettlangdon/git-vendor][git-vendor]] for managing the vendored
+  library. Updating is as simple as:
+
+  #+BEGIN_SRC shell
+    git-vendor update nasm nasm-2.13.03
+  #+END_SRC
+
+  So fork, clone, run that command, and submit a Pull Request.
+
+* Versioning
+
+  This gem does not conform to Semantic Versioning. Rather, it defers to the
+  versioning of the vendored library, with an additional digit indicating the
+  number of packaging-related commits. This is a deliberate choice, so that
+  version constraints in dependent libraries may be expressed in terms of the
+  vendored library, and packaging details ignored.
+
+* License
+
+  This gem adopts the license used by the vendored library. See =LICENSE.txt=
+  for the full text.
+
+* Contributors
+
+  - [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
